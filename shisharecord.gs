@@ -7,7 +7,7 @@ function onSubmit(e) {
 
 //店舗名取得//
 if(e.values[3] = "シーシャ屋"){
-  for (var i = 5;i <31 ; i++){
+  for (var i = 5;i <32 ; i++){
     if(e.values[i].length > 0){
       var shop = e.values[i];
       break;
@@ -123,14 +123,14 @@ function generateObj(dbId) {
   //店舗名をリレーションDBに紐付け
   if(shopArea != ""){
 
-    for (var i = 1;i <30 ; i++){
+    for (var i = 1;i <54 ; i++){
       if(sheet2.getRange(2,i).getValue() == shopArea){
         var shopAreaNo = sheet2.getRange(1,i).getValue();
         break;
       }
     };
 
-    for (var i = 3;i <30 ; i++){
+    for (var i = 3;i <41 ; i++){
       if(sheet2.getRange(i,shopAreaNo).getValue() == shopName){
         var shopNameId = sheet2.getRange(i,shopAreaNo+1).getValue();
         break;
